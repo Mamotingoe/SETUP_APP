@@ -5,7 +5,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
    root "spaces#index"
 
-   get 
-
-
+   get '/spaces/:id', to: 'spaces#show', as: :space
 end

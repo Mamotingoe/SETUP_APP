@@ -1,9 +1,10 @@
 <h1>View Spaces</h1>
 
-<% @spaces.each do |space|%>
-<%= space.name %>
-<%= space.description %>
-<%= space.amenties %>
-<%= space.location %>
-<br>
+<% @spaces.each do |space| %>
+  <ul>
+    <li>
+      <%= link_to "" , space_path(space) %>
+      <a href="<%= space_path(space) %>"><%= space.name %></a>
+    </li>
+  </ul>
 <% end %>

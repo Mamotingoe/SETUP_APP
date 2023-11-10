@@ -22,6 +22,7 @@ puts "#{User.count} Users created"
 
 # Create spaces
 space1 = Space.create(
+  id: 1,
   size: 'Large',
   price: 100.0,
   location: 'Downtown',
@@ -32,6 +33,7 @@ space1 = Space.create(
 )
 
 space2 = Space.create(
+  id: 2,
   size: 'Medium',
   price: 50.0,
   location: 'Suburb',
@@ -49,4 +51,3 @@ Booking.create(duration: 1, date: Date.tomorrow, user: user2, space: space2)
 
 puts "#{Booking.count} Bookings created"
 puts 'Seed data created successfully!'
-

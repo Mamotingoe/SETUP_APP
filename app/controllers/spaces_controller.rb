@@ -5,18 +5,23 @@ class SpacesController < ApplicationController
   end
 
   def show
-    @spaces = Space.find(params[:id])
+    @space = Space.find(params[:id])
   end
 
   def new
-    @spaces = Space.new
+    @space = Space.new
   end
 
   def create
-    @space = Space.new(params[:space])
-    @space.save
-    redirect_to space_path(@space)
+    @space = Space.new(space_params)
+    @space.user = current_user
+    if @space.save
+      redirect_to space_path(@space)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
+
   private
 
   def space_params

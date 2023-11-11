@@ -1,12 +1,7 @@
 <h1>View Spaces</h1>
 
 <% @spaces.each do |space| %>
-  <ul>
-    <li>
+      <img alt=office space src="https://tallymarket-prod.s3.eu-west-2.amazonaws.com/variants/4luj1kbwr3p24zbqxsdth2ak2x41/8af8bfe4240df3c90811ca3f433de60fcfd44098a262eb841457bfaed806a8cd?response-content-disposi">
       <%= link_to "" , space_path(space) %>
       <a href="<%= space_path(space) %>"><%= space.name %></a>
-    </li>
-  </ul>
 <% end %>
-
-

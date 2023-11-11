@@ -1,0 +1,10 @@
+<h1>Detailed Decription of: <%= @space.name %> </h1>
+<br>
+<img alt=office space src="https://tallymarket-prod.s3.eu-west-2.amazonaws.com/variants/4luj1kbwr3p24zbqxsdth2ak2x41/8af8bfe4240df3c90811ca3f433de60fcfd44098a262eb841457bfaed806a8cd?response-content-disposition=inline%3B%20filename%3D%22Screen%20Shot%202023-02-23%20at%206.56.25%20PM.webp%22%3B%20filename%2A%3DUTF-8%27%27Screen%2520Shot%25202023-02-23%2520at%25206.56.25%2520PM.webp&response-content-type=image%2Fwebp&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6CDUP7GIEZRP2GGG%2F20231111%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231111T122227Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f759dd029ab0f06fe68f184f2406b30b26f25970177bc9b64ed503b4060eaf15">
+<p><%= @space.description %></p>
+<br>
+<p><%= @space.amenties %></p>
+<br>
+<p><%= @space.location %></p>
+
+<%= link_to "Book",  new_space_booking_path(@space) %>

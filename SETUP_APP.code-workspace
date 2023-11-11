@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://wsl+ubuntu/home/neutoria/code/Neutoria/projects/SETUP_APP"
+		}
+	],
+  "remoteAuthority": "wsl+Ubuntu",
+  "settings": {}
+}

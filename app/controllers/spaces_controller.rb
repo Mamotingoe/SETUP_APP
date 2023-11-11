@@ -7,4 +7,8 @@ class SpacesController < ApplicationController
   def show
     @spaces = Space.find(params[:id])
   end
+
+  def new
+
+  end
 end

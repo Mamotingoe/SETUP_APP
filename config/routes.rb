@@ -6,4 +6,6 @@ Rails.application.routes.draw do
    root "spaces#index"
 
    get '/spaces/:id', to: 'spaces#show', as: :space
+
+   get '/spaces/new', to: 'spaces#new'
 end

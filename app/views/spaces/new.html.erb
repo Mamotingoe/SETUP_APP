@@ -1,7 +1,9 @@
-
+<p class="h1"> Add your own Space</p>
 <%= simple_form_for(@space) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :amenties %>
-  <%= f.submit %>
+  <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+    Submit
+  <% end %>
 <% end %>

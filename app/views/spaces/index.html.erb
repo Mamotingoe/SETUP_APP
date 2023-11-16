@@ -1,7 +1,66 @@
 <h1>View Spaces</h1>
 
+<style>
+.card-product {
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: 120px;
+  width: 360px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 20px;
+}
+
+.btn-primary {
+    font-size: 12px; /* Adjust the value to change the button size */
+    padding: 4px 8px; /* Adjust padding to change the button size */
+    background: #B6B6B6;
+    border-radius: 4px;
+    border-color: white;
+  }
+
+.btn-primary:hover {
+    background-color: #6C6C6C;
+    border-color: white; /*<img alt=office space src="https://tallymarket-prod.s3.eu-west-2.amazonaws.com/variants/4luj1kbwr3p24zbqxsdth2ak2x41/8af8bfe4240df3c90811ca3f433de60fcfd44098a262eb841457bfaed806a8cd?response-content-disposi">*/
+  }
+</style>
+
+
+
+
+
 <% @spaces.each do |space| %>
-      <img alt=office space src="https://tallymarket-prod.s3.eu-west-2.amazonaws.com/variants/4luj1kbwr3p24zbqxsdth2ak2x41/8af8bfe4240df3c90811ca3f433de60fcfd44098a262eb841457bfaed806a8cd?response-content-disposi">
-      <%= link_to "" , space_path(space) %>
-      <a href="<%= space_path(space) %>"><%= space.name %></a>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= space.name %></h2>
+      <%= link_to "View Details", space_path(space), class: "btn btn-primary" %>
+    </div>
+  </div>
 <% end %>

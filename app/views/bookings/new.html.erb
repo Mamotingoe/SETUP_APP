@@ -1,6 +1,34 @@
-<h1>New Booking</h1>
-<%= simple_form_for [@space, @booking] do |f| %>
-  <%= f.input :duration %>
-  <%= f.input :date %>
-  <%= f.submit "Submit booking", class: "btn btn-primary" %>
-<% end %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+  Booking
+</div>
+<div class="container">
+  <h1>New Booking</h1>
+  <%= simple_form_for [@space, @booking] do |f| %>
+    <%= f.input :duration %>
+    <%= f.input :date %>
+    <%= f.submit "Submit booking", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+<style>
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 30px 0 0 0;
+  
+}
+</style>

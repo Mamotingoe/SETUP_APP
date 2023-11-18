@@ -1,2 +1,97 @@
 // Import page-specific CSS files here.
 @import "home";
+.card-product {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  height: 270px;
+  width: 700px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.card-product img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.zoomed-in {
+  /* Set initial size */
+  width: 100px;
+  height: 100px;
+  /* Add transition for smooth effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoomed-in:hover {
+  /* Apply the zoom effect on hover */
+  transform: scale(1.1);
+}
+
+.card-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 20px;
+
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 20px;
+}
+
+
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+
+
+
+h1 {
+  font-family: sans-serif;
+}
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}

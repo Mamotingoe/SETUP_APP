@@ -1,10 +1,49 @@
-<h1>View Spaces</h1>
+<div class="main">
+ <div class="container">
+    <div class="d-flex justify-content-between">
+    <div class="content">
+    <h1>Welcome to The<strong> Hot Desk</strong> Experts.</h1>
+    <p>Whether you require a dedicated hot desk for your team or a one-time meeting space, The Hot Desk Experts have got you covered.</p>
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <input class="form-control string required" type="text" name="search[query]" placeholder="Search a location" id="search_query" />
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i> Search
+        </button>
+    </div>
+    </div>
+    <div class="img">
+     <img src="https://www.zirconinterior.com.au/wp-content/uploads/2022/02/green-retreats-showroom-cafe-and-breakout-area-7832.jpg">
+    </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+  <div class="container">
+    <% @spaces.each do |space| %>
+      <div class="card-product">
+        <img class="zoomed-in" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= space.name %></h2>
+          <%= link_to "View Details", space_path(space), class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
 
-<% @spaces.each do |space| %>
-    <%= link_to "" , space_path(space) %>
-    <a href="<%= space_path(space) %>"><%= space.name %></a>
-    <br>
+  <%= link_to "Create Your Own Space", new_space_path(@space), class: "btn btn-gradient", role: "button" %>
+  </div>
+</div>
 
-<% end %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
 
-<%= link_to "Create Your own Space " , new_space_path(@space), class: "btn btn-gradient", role: "button" %>

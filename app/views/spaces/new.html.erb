@@ -3,7 +3,10 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :amenties %>
+  <%= f.input :price %>
+  <%= f.input :size, as: :radio_buttons, collection: ["Small", "Medium", "Large"] %>
   <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
     Submit
   <% end %>
 <% end %>
+

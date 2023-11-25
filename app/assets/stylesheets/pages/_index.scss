@@ -4,52 +4,67 @@
   margin-bottom: 20px;
   margin-top: 20px;
   overflow: hidden;
-  height: 270px;
-  width: 700px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 600px;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   display: flex;
-  align-items: flex-start;
+  transition: box-shadow 0.3s ease;
+}
 
+.card-product:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
 .card-product img {
   height: 100%;
   width: 50%;
   object-fit: cover;
-}
-
-.zoomed-in {
-  /* Set initial size */
-  width: 100px;
-  height: 100px;
-  /* Add transition for smooth effect */
-  transition: transform 0.3s ease-in-out;
-}
-
-.zoomed-in:hover {
-  /* Apply the zoom effect on hover */
-  transform: scale(1.1);
-}
-
-.card-product h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 20px;
-
-}
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: 0.7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  border-radius: 6px 0 0 6px;
 }
 
 .card-product .card-product-infos {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-product h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.card-product p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 8px 0;
+  color: #666666;
+}
+
+.btn-wrapper {
+  margin-top: 15px;
+}
+
+.btn-card {
+  display: block;
+  width: 100%;
+  background-color: #3498db;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+  background-color: #2980b9;
 }
 
 
@@ -68,4 +83,3 @@
 h1 {
   font-family: sans-serif;
 }
-

@@ -1,27 +1,33 @@
 
-<br>
-<div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
+<div class="slider-cards">
+  <div class="slider-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dygqssgke/image/upload/v1700302473/austin-distel-wawEfYdpkag-unsplash_ahcxef.jpg)">
+  </div>
+  <div class="slider-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dygqssgke/image/upload/v1700302459/austin-distel-mpN7xjKQ_Ns-unsplash_idrpxv.jpg)">
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Lunch
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
+  <div class="slider-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dygqssgke/image/upload/v1700319479/austin-distel-Ht9FPY8XLog-unsplash_i2soyt.jpg)">
   </div>
 </div>
 <div class="container">
-  <h1><%= @space.name %> </h1>
+  <div class="info">
+    <h1><%= @space.name %></h1>
     <p><%= @space.description %></p>
     <br>
-    <p><%= @space.amenties %></p>
+    <p id="location"><%= @space.location %></p>
     <br>
-    <p><%= @space.location %></p>
+    <div class="wrapper">
+      <h3>Amenities</h3>
+      <p><%= @space.amenties %></p>
+    </div>
     <br>
-    <p><%= @space.price %></p>
+    <p>R<%= @space.price %>/desk pm</p>
+    <div class="container mt-4">
+  <div class="buttons-container">
+    <%= link_to "Book", new_space_booking_path(@space), class: "btn btn-primary", role: "button" %>
+    <%= link_to "Back", spaces_path, class: "btn btn-secondary ml-2", role: "button" %>
+  </div>
+  </div>
 </div>
-  <%= link_to "Book", new_space_booking_path(@space), class: "btn btn-gradient", role: "button" %>
-  <%= link_to "Back", spaces_path, class: "btn btn-gradient", role: "button" %>
+
+
+</div>
